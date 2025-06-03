@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react';
+import { Helmet } from 'react-helmet';
 
 const MainContent = ({ onCelebrate }: { onCelebrate: () => void }) => {
   const [zoom, setZoom] = useState(false);
@@ -45,6 +46,26 @@ const MainContent = ({ onCelebrate }: { onCelebrate: () => void }) => {
       )}
 
       <audio ref={audioRef} src="/assets/lion-roar.mp3" preload="auto" />
+      <Helmet>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="RCB Universe - Celebrate Royal Challengers Bangalore victories, share fan messages, memes, and highlights." />
+        <meta name="keywords" content="RCB, Royal Challengers Bangalore, IPL, Cricket, Fan Messages, Memes, Highlights" />
+        <meta name="author" content="Your Name or Team" />
+
+        <meta property="og:title" content="RCB Universe - Celebrate RCB Victories" />
+        <meta property="og:description" content="Join the RCB Universe with fan messages, memes, and match highlights!" />
+        <meta property="og:image" content="https://yourdomain.com/assets/rcb-logo.png" />
+        <meta property="og:url" content="https://yourdomain.com" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="RCB Universe - Celebrate RCB Victories" />
+        <meta name="twitter:description" content="Join the RCB Universe with fan messages, memes, and match highlights!" />
+        <meta name="twitter:image" content="https://yourdomain.com/assets/rcb-logo.png" />
+        <title>RCB Universe - Celebrate Royal Challengers Bangalore</title>
+
+      </Helmet>
     </div>
   );
 };
