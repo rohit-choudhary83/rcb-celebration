@@ -9,7 +9,7 @@ export interface BackgroundAudioHandle {
 const BackgroundAudio = forwardRef<BackgroundAudioHandle>((props, ref) => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
-
+console.log(props)
   const startMusic = () => {
     if (audioRef.current && !isPlaying) {
       audioRef.current.play();
