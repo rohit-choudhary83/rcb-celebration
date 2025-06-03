@@ -1,0 +1,51 @@
+/* Keyframe that combines horizontal movement, jumping, and spinning */
+@keyframes ballJumpSpin {
+  0% {
+    transform: translateX(-150px) translateY(0) rotate(0deg);
+  }
+  20% {
+    transform: translateX(25vw) translateY(-80px) rotate(120deg);
+  }
+  40% {
+    transform: translateX(50vw) translateY(0) rotate(240deg);
+  }
+  60% {
+    transform: translateX(75vw) translateY(-80px) rotate(360deg);
+  }
+  80% {
+    transform: translateX(90vw) translateY(0) rotate(480deg);
+  }
+  100% {
+    transform: translateX(100vw) translateY(0) rotate(600deg);
+  }
+}
+
+/* Overall container styling */
+.app-container {
+  min-height: 100vh;
+  background-color: #000;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Ball wrapper container that initiates the animation */
+.ball-wrapper {
+  position: fixed;
+  top: 40vh; /* Starting vertical placement */
+  left: 0;
+  width: 150px;
+  height: 150px;
+  animation: ballJumpSpin 3s cubic-bezier(0.42, 0, 0.58, 1) forwards;
+  z-index: 9999;
+}
+
+/* Cricket ball styling */
+.cricket-ball {
+  width: 150px;
+  height: 150px;
+  background: url('/assets/cricket-ball.png') no-repeat center/contain;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 0 15px rgba(255, 69, 0, 0.7); /* Subtle glowing effect */
+}

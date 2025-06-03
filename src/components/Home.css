@@ -1,0 +1,35 @@
+/* src/components/Home.css */
+
+@keyframes moveBall {
+  0% {
+    transform: translateX(-100%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(100vw) rotate(360deg);
+  }
+}
+
+@keyframes fadeScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.cricket-ball {
+  position: absolute;
+  top: 40px;
+  width: 60px;
+  height: 60px;
+  animation: moveBall 5s linear infinite;
+}
+
+.rcb-logo {
+  width: 120px;
+  animation: fadeScale 1.5s ease-out;
+  margin-bottom: 24px;
+}
